@@ -26,12 +26,12 @@ inv = 255-gray  # convert inverse form
 
 gauss = cv2.GaussianBlur(inv,ksize=(15,15),sigmaX=0,sigmaY=0)   # convert gauss form
 
-pencil = cv2.divide(gray,255-gauss,scale=256)
+sketching = cv2.divide(gray,255-gauss,scale=256)
 
 cv2.imshow("original",image)
 cv2.imshow("resized",resized)
 cv2.imshow('sharp',sharpened)
 cv2.imshow("gray", gray)
-cv2.imshow('pencile',pencil)
+cv2.imshow('sketching',sketching)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
